@@ -32,7 +32,7 @@ if($_POST){
     Valor B:
     <input type="text" name="valorB" id="">
     <br/>
-    <input type="submit" value="Calcular">
+    <input type="submit" value="Revisar">
 
    </form>
 
