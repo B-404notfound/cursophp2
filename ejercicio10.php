@@ -33,6 +33,7 @@ if($_POST){
     <input type="text" name="valorB" id="">
     <br/>
     <input type="submit" value="Revisar">
+    <input type="submit" value="Cacular">
 
    </form>
 
