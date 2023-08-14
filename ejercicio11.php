@@ -11,17 +11,28 @@ if($_POST){
     $multiplicacion=$valorA*$valorB;
     $division=$valorA/$valorB;
 
-    echo "La suma de los numeros es: ".$suma."<br/>";
-    echo "La resta de los numeros es: ". $resta."<br/>";
-    echo "la multiplicacion de los numeros es: ".$multiplicacion."<br/>";
-    echo "La division de los numeros es: ".$division."<br/>";
+    echo "<br/>".$suma;
+    echo "<br/>".$resta;
+    echo "<br/>".$multiplicacion;
+    echo "<br/>".$division;
+
+    if($valorA==$valorB){
+        echo "El valor de A es igual al valor de B <br/>";
+
+        if($valorA==4){
+            echo "El valor es 4 <br/>";
+        }
+
+        if($valorA==5){
+            echo "El valor es 5 <br/>";
+        }
+
+    }
+
 }
 
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +43,7 @@ if($_POST){
 </head>
 <body>
     
-   <form action="ejercicio8.php" method="post">
+   <form action="ejercicio11.php" method="post">
     Valor A:
     <input type="text" name="valorA" id="">
     <br/>
