@@ -1,9 +1,11 @@
 <?php
 
-function imprimirNombre($nombre){
-    echo "Hola ".$nombre."<br/>";
+function imprimirNombre($nombre,$apellido){
+    echo "Hola ".$nombre." ".$apellido."<br/>";
 }
 
-imprimirNombre("Juan");
-imprimirNombre("Pedro");
+
+imprimirNombre("Juan","Palacios");
+imprimirNombre("Pedro","Uribe");
 ?>
+
