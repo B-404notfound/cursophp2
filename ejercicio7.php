@@ -1,20 +1,30 @@
 <?php
 
-$edad = 32; // variable 
 
-echo $edad."<br/>";
 
-$edad = 40; // cambiar valor de la variable 
+    class Persona{
+        public $nombre;
+        public $apellido;
+        public $edad;
 
-echo $edad."<br/>";
+        public function asignarEdad($edad1){
+            $this->edad = $edad1;
+        }
+        public function asignarNombre($nombreP){
+            $this->nombre=$nombreP;
+        }
 
-// uso de constantes
+    }
 
-define("NOMBRE","Elias");
+    $pedad1 = new Persona();
+    $persona1 = new Persona();
 
-// imprimir constantes
+    $persona1->asignarNombre("Pedro"."<br/>");
 
-echo NOMBRE;
+    $pedad1->asignarEdad(44,"<br/>");
+
+    echo $pedad1->edad;
+    echo $persona1->nombre;
 
 ?>
 
