@@ -13,13 +13,14 @@ class Persona{
 
     }
 
-    public function asignarApellido($nuevoApellido){
+    public function imprimirNombre(){
 
-        $this->apellido=$nuevoApellido;
+        echo "Hola soy ".$this->nombre;
     }
 
-    public function asignarEdad($edadPersona){
-        $this->edad=$edadPersona;
+    public function asignarEdad(){
+        $this->edad=20;
+        return $this->edad;
     }
     
 }
@@ -27,16 +28,8 @@ class Persona{
 $personaEdad = new Persona();
 
 $objAlum = new Persona(); // instancia o creacion de un objeto
-$obj2 = new Persona();
+$objAlum->asignarNombre("Elias");
 
-$objAlum->asignarNombre("Elias"); // llamando a un metodo 
-$obj2->asignarApellido("Lara");
 
-$personaEdad->asignarEdad(33);
-
-echo $personaEdad->edad;
-echo $obj2->apellido;
-
-echo $objAlum->nombre; // imprimir una propiedad 
 
 ?>
