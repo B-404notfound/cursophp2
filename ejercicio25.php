@@ -22,9 +22,21 @@ class Persona{
     
 }
 
+class trabajador extends persona{
+    public $puesto;
+
+    public function presentarseComoTrabajador(){
+        echo "Hola soy ".$this->nombre." y soy un ".$this->puesto;
+    }
+}
+
 $objAlumno = new Persona(); // instancia o creacion de un objeto
 $objAlumno->asignarNombre("Pedro");
 
+$objTrabajador = new trabajador();
+$objTrabajador->nombre="Juan";
+$objTrabajador->puesto="soldador";
+$objTrabajador->presentarseComoTrabajador();
 
 
 
