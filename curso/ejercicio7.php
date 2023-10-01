@@ -25,11 +25,11 @@
     }
 
 
-    $super1 = new Instalacion();
-    $pedad1 = new Persona();
-    $persona1 = new Persona();
+    $super1 = new Instalacion("GTD Huerfanos","Alejandro");
+    $pedad1 = new Persona("Miguel","Palacios",43);
+    $persona1 = new Persona("Juan","Rodriguez",45);
 
-    $guardia1 = new Persona();
+    $guardia1 = new Persona("Lorena","Astudillo",56);
 
     $super1->nombreSupervisor("Alex Apablaza");
 
