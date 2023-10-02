@@ -8,10 +8,15 @@ try {
     $conexion= new PDO("mysql:host=$server;dbname=album",$user,$password);
     $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-    
-   $sql="INSERT INTO `fotos` (`id`, `nombre`, `ruta`) VALUES (NULL, 'jugando con mi amigo', 'uso.jpg');";
 
-    $conexion->exec($sql);
+    $sql="SELECT * FROM `fotos`";
+
+    $sentencia=$conexion->prepare($sql);
+    $sentencia->execute();
+
+    $resultado=$sentencia->fetchAll();
+
+    print_r($resultado);
 
     echo "Conexión establecida";
 } catch (PDOException $error) {
