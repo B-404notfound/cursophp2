@@ -18,6 +18,10 @@ try {
 
     print_r($resultado);
 
+    foreach($resultado as $foto){
+        print_r($foto);
+    }
+
     echo "Conexión establecida";
 } catch (PDOException $error) {
     echo "Conexión erronea".$error;
