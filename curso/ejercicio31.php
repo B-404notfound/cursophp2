@@ -9,7 +9,7 @@ if($_POST){
     
     $rdgLenguaje=  (isset($_POST['lenguaje']))?$_POST['lenguaje']:"";
 
-    print_r($_POST);
+ 
 }
 
 
@@ -26,6 +26,8 @@ if($_POST){
   
     <?php  if($_POST){ ?>
    <strong>Hola</strong>:  <?php echo $txtNombre;  ?>
+   <br/>
+   <strong>Tu lenguaje es: </strong><?php echo $rdgLenguaje;  ?>
     <?php   } ?>
     
     <form action="ejercicio31.php" method="post">
@@ -33,9 +35,17 @@ if($_POST){
         <input type="text" name="txtNombre" id="">
         <br/>
         ¿te gusta?: <br/>
-        <br/>php: <input type="radio" name="lenguaje" value="php" id=""><br/>
-        <br/>html: <input type="radio" name="lenguaje" value="html" id=""><br/>
-        <br/>css: <input type="radio" name="lenguaje" value="css" id=""><br/>
+        <br/>php: <input type="radio" <?php echo ($rdgLenguaje=="php")?"checked":"" ?> name="lenguaje" value="php" id=""><br/>
+        <br/>html: <input type="radio" <?php echo ($rdgLenguaje=="html")?"checked":"" ?>name="lenguaje" value="html" id=""><br/>
+        <br/>css: <input type="radio" <?php echo ($rdgLenguaje=="css")?"checked":"" ?> name="lenguaje" value="css" id=""><br/>
+
+
+        Estas aprendiendo ... <br/>
+
+        <br/>php:   <input type="checkbox" name="chkphp" id="">
+        <br/>html:  <input type="checkbox" name="chkhtml" id="">
+        <br/>css:   <input type="checkbox" name="chkcss" id="">
+
 
         <input type="submit" value="Enviar información">
     </form>
