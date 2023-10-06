@@ -8,7 +8,7 @@ $chkhtml="";
 $chkcss="";
 
 $lsAnime="";
-
+$txtComentario="";
 
 
 if($_POST){
@@ -21,7 +21,9 @@ if($_POST){
 
     $lsAnime= (isset($_POST['lsAnime']))?$_POST['lsAnime']:"";
 
-    print_r($_POST);
+    $txtComentario=  (isset($_POST['txtComentario']))?$_POST['txtComentario']:"";
+
+
 }
 
 
@@ -41,6 +43,7 @@ if($_POST){
    <br/>
    <strong>Tu lenguaje es: </strong><?php echo $rdgLenguaje;  ?>
     <?php   } ?>
+    <strong>Tu mensaje es: </strong><?php echo $txtComentario;  ?>
     
     <form action="ejercicio31.php" method="post">
         Nombre: <br/>
